@@ -1,1 +1,2 @@
-# assignment
+# Web Technology Assignment 1
+This is my first assignment.

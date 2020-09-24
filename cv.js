@@ -1,3 +1,4 @@
+
 function validateFirstName(){
     const name = document.getElementById('firstName').value;
     
@@ -31,7 +32,7 @@ function validateFirstName(){
     
         const name = document.getElementById('address').value;
     
-    if(!name.match(/^[A-Za-z]/)){
+    if(!name.match(/\b(?:p\.?\s*o\.?|post\s+office)(\s+)?(?:box|[0-9]*)?\b/)){
     alert('Enter a valid address');
     }
     return name;
@@ -49,7 +50,7 @@ function validateFirstName(){
     function validateEmail(){
         const name = document.getElementById('email').value;
     
-        if(!name.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)){
+        if(!name.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)){
         alert('Enter a valid email');
         }
         return name;

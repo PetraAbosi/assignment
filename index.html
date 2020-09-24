@@ -4,43 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment 1</title>
-    <link href="cv.css" rel="stylesheet" type="text/css">
+
+   <link rel="stylesheet" href="cv1.css" type="text/css"> 
+  
 </head>
 <body>
     <h2>CV Contact Form</h2>
-    <form id="addForm" class="formPage" method="POST"></form>
+    <form action="cv1.html" method="GET">
     <div class="container">
         <label for="firstName"> First Name</label>
-        <input type="text" id="firstName" name="fname" placeholder="Your first name...">
-        <label for="middleName">Middle Name</label>
-        <input type="text" id="middleName" name="midname" placeholder="Your middle name...">
-        <label for="lastName"> Last Name</label>
-        <input type="text" id="lastName" name="lname" placeholder="Your last name...">
+        <input type="text"  id="firstName" name="fname" oninput = "validateFirstName();" placeholder="Your first name..." required>
     </div>
-    <div class="radio-box">
-        <p>Gender</p>
-        <input type="radio" id="male" name="gender" value="Male">
-        <label for="male">Male</label><br>
-        <input type="radio" id="female" name="gender" value="Female">
-        <label for="female">Female</label><br>
-    </div>
-    <div class="container">
-        <label for="phone">Enter your phone number:</label><br>
-        <input type="tel" id="phone" name="phone" pattern="[0-9] {3}-[0-9] {4} [0-9] {3}">
 
+    <div class="container">
+        <label for="middleName">Middle Name</label>
+        <input type="text" id="middleName" name="midname" oninput= "validateMiddleName()"placeholder="Your middle name..." required>
+        </div>
+
+    <div class="container">
+        <label for="lastName"> Last Name</label>
+        <input type="text" id="lastName" name="lname" oninput="validateLastName()" placeholder="Your last name..." required>
     </div>
+
+    <div class="container">
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address" oninput=" validateAddress()" placeholder="Your home address..." required>
+    </div>
+
+    <div class="container">
+        <label for="phone">Phone Number</label><br>
+        <input type="tel" max="10" id="phone" name="phone" oninput ="validatePhoneNumber()" placeholder="Enter your phone number" required>
+    </div>
+    
     <div class="container">
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="studentname@ashesi.edu.gh">
+        <input type="email" id="email" name="email" oninput="validateEmail()" placeholder="studentname@ashesi.edu.gh"required>
     </div>
 
     <div class="container">
-        <label for="address"><Address></Address></label>
-        <input type="text" id="address" name="address" placeholder="Your home address...">
+        <p>Gender</p>
+        <input type="radio" id="male" name="gender" value="male" required>
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="female" required>
+    <label for="female">Female</label><br>
     </div>
-    <button id="addParticipant" type="submit" value="Submit">Submit</button>
-    <div class="radio-box" id="form-errors"></div>
+
+    <div class="container">
+    <input type="submit" name="submit" id ="submit" value= "Submit"> 
+     </div>
     
+    </form>
+
+    <script src='script.js'></script>
 </body>
 </html>
 
